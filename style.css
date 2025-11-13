@@ -1,0 +1,105 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root {
+    --main-width: 45vw;
+    --flex-dir: column;
+}
+
+body {
+    display: flex;
+    flex-direction: var(--flex-dir);
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    height: 100vh;
+
+    margin: 0;
+    background-color: #181926;
+
+    color: white;
+    font-family: "Raleway", sans-serif;
+    font-style: normal;
+    font-size: clamp(0.75rem, 0.85vw, 1rem);
+}
+
+.main {
+    max-width: var(--main-width);
+}
+
+.bio {
+    margin: 0;
+    padding: 20px;
+    border: 0.5vh solid #1e2030;
+    border-radius: 20px;
+    background-color: #24273a;
+}
+
+.info {
+    display: flex;
+    flex-direction: row;
+}
+
+.buttons {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+#pfp {
+    width: 10vw;
+    height: 10vw;
+    margin: 1em;
+    border-radius: 20px;
+}
+
+h1, a {
+    color: #ebaaee;
+    text-decoration: none;
+}
+
+a.txt:hover {
+    color: #fcbbff;
+    text-decoration: underline;
+}
+
+@media screen and (max-width: 800px) {
+    :root {
+        --main-width: 80vw;
+        --flex-dir: row;
+    }
+}
+
+.friends {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.socials {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    justify-self: flex-end;
+    gap: 12px;
+}
+
+.button-88x31 {
+    width: 88px;
+    height: 31px;
+    border: none;
+    border-radius: 0;
+    transition: all 0.3s ease;
+}
+
+.social {
+    width: 32px;
+    height: 32px;
+    border: none;
+    border-radius: 0;
+    transition: all 0.3s ease;
+}
+
+.button-88x31:hover, .social:hover {
+    transform: translateY(-1px);
+    filter: brightness(0.5);
+}
