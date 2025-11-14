@@ -7,6 +7,8 @@
     --p-overflow: auto;
     --flex-dir: row;
     --justify: center;
+    --button-dir: row;
+    --button-align: auto;
 }
 
 @media (any-pointer:none), (any-pointer:coarse), screen and (max-width: 800px) {
@@ -17,6 +19,8 @@
         --p-overflow: none;
         --flex-dir: column;
         --justify: auto;
+        --button-dir: column;
+        --button-align: center;
     }
 }
 
@@ -74,8 +78,9 @@ table {
 
     .buttons {
         display: flex;
-        flex-direction: row;
+        flex-direction: var(--button-dir);
         justify-content: space-between;
+        align-items: var(--button-align);
     }
 
     #pfp {
@@ -94,6 +99,7 @@ table {
         display: flex;
         flex-wrap: wrap;
         gap: 12px;
+        justify-content: var(--button-align);
     }
 
     .button-88x31 {
@@ -131,7 +137,7 @@ table {
         border: 0.5vh solid #1e2030;
         border-radius: 20px;
         background-color: #24273a;
-        gap: 36px;
+        gap: 0.75em;
         transition: all 0.3s ease;
     }
 
@@ -140,10 +146,9 @@ table {
         align-items: center;
         justify-content: center;
         text-decoration: none;
-        font-size: 1.5em;
-        width: 48px;
-        height: 48px;
-        font-size: 48px;
+        font-size: 1.75em;
+        width: 1.75em;
+        height: 1.75em;
         transition: all 0.3s ease;
 }
 
