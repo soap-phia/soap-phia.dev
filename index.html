@@ -19,9 +19,55 @@
                     </div>
                 </div>
                 <h4>Hi there! I'm Sophia. I've been programming since 2022, and currently enjoy writing in Bash, Java/Javascript, and Rust. I own <a class="txt" href="https://aerialite.dev">Aerialite Labs</a> and am an admin of <a class="txt" href="https://night-x.com">Night Network</a>.</h4>
+                <h4>Aside from programming, I enjoy art, interior design, and ice skating (I teach it too!).</h4>
+                <div class="favorites">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Favorite Music</th>
+                                <th>Favorite Movies</th>
+                                <th>Favorite TV Shows</th>
+                                <th>Favorite Video Games</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>1. Britney Spears</td>
+                                <td>1. The Princess Bride</td>
+                                <td>1. Schitt's Creek</td>
+                                <td>1. Piss off Stella</td>
+                            </tr>
+                            <tr>
+                                <td>2. The Beatles</td>
+                                <td>2. Good Burger</td>
+                                <td>2. Brooklyn 99</td>
+                                <td>2. Celeste</td>
+                            </tr>
+                            <tr>
+                                <td>3. Queen</td>
+                                <td>3. Interstate 60</td>
+                                <td>3. Abbot Elementary</td>
+                                <td>3. Satisfactory</td>
+                            </tr>
+                            <tr>
+                                <td>4. Panchiko</td>
+                                <td>4. Guardians of the Galaxy 2</td>
+                                <td>4. Family Guy</td>
+                                <td>4. Terraria</td>
+                            </tr>
+                            <tr>
+                                <td>5. KISS</td>
+                                <td>5. Empire Strikes Back</td>
+                                <td>5. Once Upon a Time</td>
+                                <td>5. Balatro</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <h4>Yes, I am aware half of these suck. No, I do not care.</h4>
+                </div>
                 <div class="buttons">
                     <div class="friends">
-                        <img id="soapbutton" src="/assets/button.png" alt="soap" class="button-88x31"><!--im my own friend :3-->
+                        <img id="mebutton" src="/assets/button.png" alt="soap" class="button-88x31"><!--im my own friend :3-->
                         <a href="https://synaptic.site" target="_blank">
                             <img src="/assets/synaptibutton.png" alt="synaptic" class="button-88x31">
                         </a>
@@ -30,6 +76,9 @@
                         </a>
                         <a href="https://github.com/epic-devices" target="_blank">
                             <img src="/assets/epicbutton.png" alt="epicdevices" class="button-88x31">
+                        </a>
+                        <a href="https://amplifydev.tech" target="_blank">
+                            <img src="/assets/amplibutton.png" alt="ampy wampy" class="button-88x31">
                         </a>
                         <a href="https://simpansoftware.cc" target="_blank">
                             <img src="/assets/simonbutton.png" alt="simon" class="button-88x31">
@@ -48,7 +97,7 @@
                         <a class="social" href="https://discord.com/users/1012095822957133976" target="_blank"><i class="fa-brands fa-discord"></i></a>
                         <a class="social" href="https://github.com/soap-phia/" target="_blank"><i class="fa-brands fa-github"></i></a>
                         <a class="social" href="mailto:sophia@soap-phia.dev" target="_blank"><i class="fa-regular fa-envelope"></i></a>
-                        <a class="social" href="mailto:sophia@soap-phia.dev" target="_blank"><i class="fa-brands fa-bluesky"></i></a>
+                        <a class="social" href="https://bsky.app/profile/soap-phia.dev" target="_blank"><i class="fa-brands fa-bluesky"></i></a>
                     </div>
                 </div>
             </div>
@@ -59,7 +108,22 @@
         <div class="projects">
             
         </div>
-        <script src="/index.js"></script>
+        <script>
+            document.addEventListener('DOMContentLoaded', function() {
+            button = document.getElementById('mebutton');
+            const tag = `
+            <a href="https://soap-phia.dev" target="_blank">
+                <img src="https://soap-phia.dev/button.png" alt="soap" class="button-88x31">
+            </a>
+            `;
+            button.addEventListener('click', async () => {
+                await navigator.clipboard.writeText(tag);
+                alert(tag + `
+                    
+            Copied to clipboard. If you're using this and you shouldn't be, you're a creep.`)
+            })
+            });
+        </script><!--this js is to add copyability to your own button-->
         <script src="/monthly.js"></script>
         <script src="/splash.js"></script>
     </body>

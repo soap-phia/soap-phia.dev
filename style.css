@@ -105,3 +105,8 @@ a.txt:hover {
     text-decoration: none;
     font-size: 1.5em;
 }
+
+table {
+    width: 100%;
+    text-align: center;
+}
