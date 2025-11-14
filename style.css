@@ -9,7 +9,7 @@
     --justify: center;
 }
 
-@media screen and (max-width: 800px) {
+@media (any-pointer:none), (any-pointer:coarse), screen and (max-width: 800px) {
     :root {
         --main-width: 80vw;
         --p-width: 80vw;
