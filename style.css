@@ -75,14 +75,6 @@ a.txt:hover {
     gap: 12px;
 }
 
-.socials {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: flex-end;
-    justify-self: flex-end;
-    gap: 12px;
-}
-
 .button-88x31 {
     width: 88px;
     height: 31px;
@@ -91,15 +83,25 @@ a.txt:hover {
     transition: all 0.3s ease;
 }
 
-.social {
-    width: 32px;
-    height: 32px;
-    border: none;
-    border-radius: 0;
-    transition: all 0.3s ease;
-}
-
-.button-88x31:hover, .social:hover {
+.button-88x31:hover{
     transform: translateY(-1px);
     filter: brightness(0.5);
+}
+
+.socials {
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 12px;
+    justify-content: flex-end;
+    justify-self: flex-end;
+}
+
+.social {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 32px;
+    height: 32px;
+    text-decoration: none;
+    font-size: 1.5em;
 }

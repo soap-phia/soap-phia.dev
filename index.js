@@ -9,6 +9,6 @@ button.addEventListener('click', async () => {
     await navigator.clipboard.writeText(tag);
     alert(tag + `
         
-        copied to clipboard.`)
+Copied to clipboard. If you're using this and you shouldn't be, you're a creep.`)
 })
 });
